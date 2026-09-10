@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnoSay — Say it without the name</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/public-home.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="topbar-logo" href="/ui/">
+                <span class="logo-ano">Ano</span><span class="logo-say">Say</span>
+            </a>
+            <nav class="topbar-nav">
+                <a class="topbar-link active" href="/ui/">Home</a>
+                <a class="topbar-link" href="/ui/stories">Stories</a>
+                <a class="topbar-link" href="/ui/submit">Share</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <p class="tagline">Say it without the name.</p>
+            <p class="intro">
+                AnoSay is a safe, anonymous space for students to share campus stories,
+                thoughts, and experiences — no name attached, no judgment.
+            </p>
+            <div class="hero-actions">
+                <a href="/ui/submit" class="btn btn-primary">Share a Story</a>
+                <a href="#latest" class="btn btn-secondary">Browse Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="how-inner">
+            <h2 class="section-title">How it works</h2>
+            <p class="how-text">
+                Pick a category, write what's on your mind, and hit submit — that's it.
+                No account needed. No name shown. Your story is reviewed before it goes live
+                to keep the space respectful for everyone.
+            </p>
+        </div>
+    </section>
+
+    <section id="latest" class="latest">
+        <div class="latest-inner">
+            <h2 class="section-title">Latest Stories</h2>
+            <p id="latest-status" class="status-note"></p>
+            <div class="story-grid" id="story-grid"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>AnoSay &copy; 2026 &mdash; Anonymous campus sharing.</p>
+    </footer>
+
+    <script src="{{ url_for('static', path='/js/public-home.js') }}"></script>
+</body>
+</html>

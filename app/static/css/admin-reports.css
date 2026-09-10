@@ -1,0 +1,115 @@
+.report-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.report-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.report-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.report-id {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #3E2C21;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.report-status {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: capitalize;
+}
+
+.report-status.pending {
+    background-color: #f0c674;
+    color: #3E2C21;
+}
+
+.report-status.reviewed {
+    background-color: #81c784;
+    color: #1b5e20;
+}
+
+.report-status.dismissed {
+    background-color: #e0a0a0;
+    color: #7f1616;
+}
+
+.report-date {
+    margin-left: auto;
+    font-size: 13px;
+    color: #777;
+}
+
+.report-reason {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    word-break: break-word;
+    margin-bottom: 14px;
+}
+
+.report-story {
+    display: inline-block;
+    font-size: 12px;
+    color: #555;
+    background-color: #e9e4dd;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    word-break: break-all;
+}
+
+.report-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.report-select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #222;
+}
+
+.report-update {
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #C8963E;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.report-update:hover {
+    background-color: #6B4A33;
+}
+
+.report-empty {
+    text-align: center;
+    color: #777;
+    font-size: 15px;
+    padding: 40px 0;
+}

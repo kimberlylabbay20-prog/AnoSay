@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story | AnoSay</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/public-story-detail.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="topbar-logo" href="/ui/">
+                <span class="logo-ano">Ano</span><span class="logo-say">Say</span>
+            </a>
+            <nav class="topbar-nav">
+                <a class="topbar-link" href="/ui/">Home</a>
+                <a class="topbar-link active" href="/ui/stories">Stories</a>
+                <a class="topbar-link" href="/ui/submit">Share</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="detail-section">
+            <div class="detail-inner">
+
+                <div id="story-view" class="story-view hidden">
+                    <a class="back-link" href="/ui/stories">&larr; Back to Stories</a>
+
+                    <article class="story-card">
+                        <h1 class="story-title" id="story-title"></h1>
+                        <div class="story-meta">
+                            <span class="story-cat" id="story-category"></span>
+                            <span class="story-tags" id="story-tags"></span>
+                            <span class="story-date" id="story-date"></span>
+                        </div>
+                        <div class="story-content" id="story-content"></div>
+                    </article>
+
+                    <div class="card-actions">
+                        <button class="btn btn-report" id="report-btn">Report Story</button>
+                    </div>
+                </div>
+
+                <div id="not-found-view" class="not-found-view hidden">
+                    <h2 class="not-found-title">Story not found</h2>
+                    <p class="not-found-text">
+                        This story does not exist, or it is still waiting for approval.
+                    </p>
+                    <a class="btn btn-primary" href="/ui/stories">Back to Stories</a>
+                </div>
+
+                <div id="status-line" class="status-line" role="status" aria-live="polite"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="report-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 class="modal-title">Report Story</h2>
+            <p class="modal-subtitle">Help keep AnoSay respectful. Tell us what's wrong.</p>
+            <form id="report-form">
+                <div class="form-group">
+                    <label class="form-label" for="report-reason">Reason</label>
+                    <textarea class="form-textarea" id="report-reason" rows="5" placeholder="Briefly describe the issue (at least 5 characters)" maxlength="500"></textarea>
+                    <span class="form-hint" id="reason-hint"></span>
+                </div>
+                <div id="report-message" class="report-message"></div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-cancel" id="report-cancel">Cancel</button>
+                    <button type="submit" class="btn btn-submit" id="report-submit">Submit Report</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>AnoSay &copy; 2026 &mdash; Anonymous campus sharing.</p>
+    </footer>
+
+    <script src="{{ url_for('static', path='/js/public-story-detail.js') }}"></script>
+</body>
+</html>

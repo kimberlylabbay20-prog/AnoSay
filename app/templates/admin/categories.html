@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | AnoSay Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/admin-dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/admin-categories.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-ano">Ano</span><span class="logo-say">Say</span>
+        </div>
+        <div class="admin-profile">
+            <div class="avatar">A</div>
+            <span class="admin-name">Admin</span>
+            <button class="logout-btn" id="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <a class="nav-item" href="/ui/admin/dashboard">Dashboard</a>
+                <a class="nav-item" href="/ui/admin/stories">Stories</a>
+                <a class="nav-item" href="/ui/admin/reports">Reports</a>
+                <a class="nav-item active" href="/ui/admin/categories">Categories</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1 class="page-title">Categories</h1>
+
+            <div class="category-form">
+                <h2 class="form-title">Create Category</h2>
+                <form class="create-form" id="create-form">
+                    <label class="form-label" for="category-name">Name</label>
+                    <input class="form-input" id="category-name" name="name" type="text" maxlength="50" placeholder="Category name">
+                    <label class="form-label" for="category-description">Description</label>
+                    <input class="form-input" id="category-description" name="description" type="text" maxlength="255" placeholder="Optional description">
+                    <p id="form-note" class="status-note"></p>
+                    <button class="create-btn" type="submit">Create</button>
+                </form>
+            </div>
+
+            <p id="categories-status" class="status-note"></p>
+            <div class="category-list" id="category-list"></div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', path='/js/admin-categories.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/admin-logout.js') }}"></script>
+</body>
+</html>

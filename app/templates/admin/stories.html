@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories | AnoSay Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/admin-dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/admin-stories.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-ano">Ano</span><span class="logo-say">Say</span>
+        </div>
+        <div class="admin-profile">
+            <div class="avatar">A</div>
+            <span class="admin-name">Admin</span>
+            <button class="logout-btn" id="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <a class="nav-item" href="/ui/admin/dashboard">Dashboard</a>
+                <a class="nav-item active" href="/ui/admin/stories">Stories</a>
+                <a class="nav-item" href="/ui/admin/reports">Reports</a>
+                <a class="nav-item" href="/ui/admin/categories">Categories</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1 class="page-title">Stories</h1>
+            <p id="stories-status" class="status-note"></p>
+
+            <div class="tabs">
+                <button class="tab active" data-tab="pending">Pending</button>
+                <button class="tab" data-tab="approved">Approved</button>
+                <button class="tab" data-tab="rejected">Rejected</button>
+            </div>
+
+            <div class="story-grid" id="story-grid"></div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', path='/js/admin-stories.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/admin-logout.js') }}"></script>
+</body>
+</html>

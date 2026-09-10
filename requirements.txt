@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy>=2.0
+psycopg[binary]>=3.0
+pymongo>=4.0
+python-dotenv>=1.0
+pwdlib[argon2]
+PyJWT
+jinja2

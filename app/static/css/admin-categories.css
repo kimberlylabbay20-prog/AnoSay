@@ -1,0 +1,147 @@
+.category-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.form-title {
+    font-size: 16px;
+    color: #3E2C21;
+    margin: 0 0 14px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #3E2C21;
+    margin: 10px 0 4px;
+}
+
+.form-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #222;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #C8963E;
+}
+
+.create-btn {
+    margin-top: 14px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #C8963E;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.create-btn:hover {
+    background-color: #6B4A33;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 16px 18px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.category-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.category-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3E2C21;
+    margin: 0;
+    word-break: break-word;
+}
+
+.category-date {
+    margin-left: auto;
+}
+
+.category-description {
+    font-size: 14px;
+    color: #555;
+    margin: 8px 0 12px;
+    word-break: break-word;
+}
+
+.category-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.card-btn.edit-btn {
+    background-color: #C8963E;
+}
+
+.card-btn.edit-btn:hover {
+    background-color: #6B4A33;
+}
+
+.card-btn.delete-btn {
+    background-color: #b71c1c;
+}
+
+.card-btn.delete-btn:hover {
+    background-color: #7f1616;
+}
+
+.card-btn.cancel-btn {
+    background-color: #777;
+}
+
+.card-btn.cancel-btn:hover {
+    background-color: #555;
+}
+
+.card-btn.save-btn {
+    background-color: #2e7d32;
+}
+
+.card-btn.save-btn:hover {
+    background-color: #1b5e20;
+}
+
+.category-empty {
+    text-align: center;
+    color: #777;
+    font-size: 15px;
+    padding: 40px 0;
+}
