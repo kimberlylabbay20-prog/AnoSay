@@ -16,6 +16,6 @@ JWT_SECRET = os.getenv("JWT_SECRET", "")
 
 def get_postgres_url():
     return (
-        f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}"
+        f"postgresql+psycopg://{POSTGRES_USER}:{POSTGRES_PASSWORD}"
         f"@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
     )
